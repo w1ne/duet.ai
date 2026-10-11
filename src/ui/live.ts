@@ -5,6 +5,7 @@ import { SOUNDS, SOUND_GROUPS, soundDef, type MonitorSound } from '../players/so
 import { keyName, mod12, NOTE_NAMES } from '../music/pitchClass';
 import { chordName } from '../music/chords';
 import { DEBUG } from '../debug';
+import { PI_EDITION } from '../device/profile';
 import type { AppState, Store } from './state';
 import type { SourceState } from '../listener/listener';
 import { shortDeviceName } from '../audio/devices';
@@ -330,6 +331,7 @@ function skeleton(): string {
           <div class="field"><label for="own-amt">AMT pod</label><input id="own-amt" type="text" autocomplete="off" spellcheck="false" placeholder="pod id or wss://…/ws" /></div>
         </div>
       </details>
+      ${PI_EDITION ? '' : '<footer class="foot"><nav class="hint" aria-label="More projects"><a href="https://dobo.bot/">Dobo</a></nav></footer>'}
     </div>
   `;
 }
