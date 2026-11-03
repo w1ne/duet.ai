@@ -1364,6 +1364,10 @@ body {
   gap: 12px;
 }
 
+.screen[data-live] .foot a {
+  color: inherit;
+}
+
 .screen[data-live] .foot .hint {
   flex: 0 0 auto;
   text-align: right;
